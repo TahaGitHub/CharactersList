@@ -13,11 +13,12 @@ export default () => {
 
   let {characters} = store.getState().characters;
   // console.log(characters);
+
   useEffect(() => {
     setFilteredDataSource(characters);
   }, []);
 
-  console.log('Rendiring Characher List Screen');
+  // console.log('Rendiring Characher List Screen');
 
   return (
     <View
@@ -47,6 +48,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 17,
     paddingTop: 10,
-    paddingBottom: 100,
+    paddingBottom: 130,
   },
 });

@@ -48,16 +48,16 @@ const App: () => Node = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  console.log('Rendiring App Screen');
+  // console.log('Rendiring App Screen');
 
   useEffect(() => {
-    // AsyncStorage.clear();
+    AsyncStorage.clear();
 
     const _run = async () => {
       let data = await AsyncStorage.getItem('data');
 
       if (!data) {
-        console.log('Getting Data From Api');
+        // console.log('Getting Data From Api');
 
         await GetCharacters().then(async _data => {
           data = _data;
@@ -68,7 +68,7 @@ const App: () => Node = () => {
       }
 
       // console.log(data);
-      console.log('Passing Data To Redux');
+      // console.log('Passing Data To Redux');
       await store.dispatch(charactersAction.setCharacters(data));
       setloading(false);
     };
