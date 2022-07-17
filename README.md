@@ -2,11 +2,21 @@
 
 The libraries that are used in the project are:
 
+- [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) Pattern.
+
+  - [Controllers](https://github.com/TahaGitHub/CharactersList-ReactNative/tree/master/src/controllers) files
+
+  - [Models](https://github.com/TahaGitHub/CharactersList-ReactNative/tree/master/src/models) files
+
+  - [Views](https://github.com/TahaGitHub/CharactersList-ReactNative/tree/master/src/views) files
+
 - [react-redux](https://redux.js.org/) for state management.
 
 - [@react-navigation](https://reactnavigation.org/) for moving between screens.
 
 - [axios](https://axios-http.com/) for Api request.
+
+- Unit test.
 
 - [@react-native-async-storage/async-storage](https://react-native-async-storage.github.io/async-storage/docs/install/) for localStorage.
 
