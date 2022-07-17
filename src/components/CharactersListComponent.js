@@ -1,34 +1,33 @@
 import React, {useEffect, useState} from 'react';
 
 import {ScrollView, StyleSheet, useColorScheme, View} from 'react-native';
+
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-import CharacterItem from '../../components/CharacterItem';
-import {store} from '../../../App';
-import FilterComponent from '../../components/FilterComponent';
+/*
+ ** Local Imports
+ */
+import CharacterItem from './CharacterItemComponent';
 
-export default () => {
+import FilterComponentController from '../controllers/FilterComponentController';
+
+export default ({characters}) => {
   const isDarkMode = useColorScheme() === 'dark';
   const [filteredDataSource, setFilteredDataSource] = useState([]);
-
-  let {characters} = store.getState().characters;
-  // console.log(characters);
 
   useEffect(() => {
     setFilteredDataSource(characters);
   }, []);
 
-  // console.log('Rendiring Characher List Screen');
-
+  // console.log('Rendiring CharachersListComponent');
   return (
     <View
       style={{
         backgroundColor: isDarkMode ? Colors.black : Colors.white,
         minHeight: '100%',
       }}>
-      <FilterComponent
+      <FilterComponentController
         dataSource={characters}
-        filteredDataSource={filteredDataSource}
         setFilteredDataSource={setFilteredDataSource}
       />
       <ScrollView contentInsetAdjustmentBehavior="automatic">

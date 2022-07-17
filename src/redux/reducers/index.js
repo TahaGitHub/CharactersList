@@ -1,7 +1,9 @@
 import {combineReducers} from 'redux';
 
-import charactersReducer from './reducers/charactersReducer';
+// import ui from './ui';
+import charactersReducer from './charactersReducer';
 
 export default combineReducers({
+  // ui: ui,
   characters: charactersReducer,
 });

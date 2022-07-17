@@ -1,5 +1,6 @@
-import {useNavigation} from '@react-navigation/native';
 import React from 'react';
+
+import {useNavigation} from '@react-navigation/native';
 
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
@@ -14,8 +15,7 @@ export default ({character}) => {
     });
   };
 
-  // console.log('Rendiring Characher item');
-
+  // console.log('Rendiring CharacherItemComponent');
   return (
     <TouchableOpacity onPress={handleCharacterDetails}>
       <View style={[styles.container, styles.shadowProp]}>

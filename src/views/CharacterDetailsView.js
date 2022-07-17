@@ -8,14 +8,15 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default ({route}) => {
+export default ({character}) => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const {character} = route.params;
-
+  // console.log('Rendiring CharacterDetailsView');
   return (
     <View
       style={[
